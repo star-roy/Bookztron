@@ -1,0 +1,151 @@
+.home-component-container
+{
+    background-color: var(--pure-white);
+}
+
+.home-page-img-container
+{
+    position: relative;
+    width: 100%;
+    height: 61.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .home-page-img-container {
+        height: 40rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .home-page-img-container {
+        height: 30rem;
+    }
+}
+
+.home-page-background-img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.homepage-headings
+{
+    margin-top: 6rem;
+    margin-bottom: 0;
+    background-color: var(--pure-white);
+    padding: 0 2rem;
+    font-size: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .homepage-headings {
+        margin-top: 4rem;
+        font-size: 2.5rem;
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .homepage-headings {
+        margin-top: 3rem;
+        font-size: 2rem;
+    }
+}
+
+.genre-cards-container
+{
+    height: fit-content;
+    padding: 4rem 9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 19rem);
+    gap: 5px;
+    justify-content: center;
+    justify-items: center;
+    background-color: var(--pure-white);
+}
+
+@media only screen and (max-width: 1200px) {
+    .genre-cards-container {
+        padding: 3rem 4rem;
+        grid-template-columns: repeat(auto-fit, 16rem);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .genre-cards-container {
+        padding: 2rem;
+        grid-template-columns: repeat(auto-fit, 14rem);
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .genre-cards-container {
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 0.8rem;
+    }
+}
+
+.homepage-explore-all-btn
+{
+    color: var(--pure-white);
+    background-color: var(--red-color);
+}
+
+.homepage-explore-all-btn 
+{
+    background-position: center;
+    transition: background 0.5s;
+}
+
+.homepage-explore-all-btn:hover 
+{
+    background: var(--red-color)
+                radial-gradient(circle, transparent 1%, 
+                                    var(--red-color) 1%) center/15000%;
+}
+
+.homepage-explore-all-btn:active 
+{
+    background-color: var(--red-color);
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.new-arrivals-container
+{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,30rem);
+    background-color: var(--pure-white);
+    gap: 1rem;
+    padding: 4rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .new-arrivals-container {
+        grid-template-columns: repeat(auto-fit, 25rem);
+        padding: 3rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .new-arrivals-container {
+        grid-template-columns: repeat(auto-fit, 20rem);
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .new-arrivals-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        padding: 1rem;
+        gap: 1rem;
+    }
+}
