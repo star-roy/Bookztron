@@ -71,5 +71,3 @@ A complete MERN stack e-commerce application for book lovers, featuring a modern
 - **src/Context:** React Context providers for state management
 - **src/Assets:** Images, icons, and static resources
 - **src/UtilityFunctions:** Helper functions and utilities
-
-# Bookztron
