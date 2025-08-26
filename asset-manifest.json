@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Bookztron/static/css/main.daae6335.css",
-    "main.js": "/Bookztron/static/js/main.5f896885.js",
+    "main.js": "/Bookztron/static/js/main.cfc3eb4f.js",
     "static/media/Library_pic1.jpg": "/Bookztron/static/media/Library_pic1.254b944678a1007934dc.jpg",
     "static/media/Library_Illustration_1.jpg": "/Bookztron/static/media/Library_Illustration_1.c54dafea582d6757c53e.jpg",
     "index.html": "/Bookztron/index.html",
     "main.daae6335.css.map": "/Bookztron/static/css/main.daae6335.css.map",
-    "main.5f896885.js.map": "/Bookztron/static/js/main.5f896885.js.map"
+    "main.cfc3eb4f.js.map": "/Bookztron/static/js/main.cfc3eb4f.js.map"
   },
   "entrypoints": [
     "static/css/main.daae6335.css",
-    "static/js/main.5f896885.js"
+    "static/js/main.cfc3eb4f.js"
   ]
 }
