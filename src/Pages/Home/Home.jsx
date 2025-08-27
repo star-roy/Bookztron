@@ -39,34 +39,40 @@ function Home() {
 
     if(token)
     {
-        const user = jwtDecode(token)
-        if(!user)
-        {
-            localStorage.removeItem('token')
-        }
-        else
-        {
-            (async function getUpdatedWishlistAndCart()
+        try {
+            const user = jwtDecode(token)
+            if(!user)
             {
-                try {
-                  let updatedUserInfo = await axios.get(
-                  "https://bookztron-server.vercel.app/api/user",
-                  {
-                      headers:
+                localStorage.removeItem('token')
+            }
+            else
+            {
+                (async function getUpdatedWishlistAndCart()
+                {
+                    try {
+                      let updatedUserInfo = await axios.get(
+                      "https://bookztron-server.vercel.app/api/user",
                       {
-                      'x-access-token': localStorage.getItem('token'),
-                      }
-                  })
+                          headers:
+                          {
+                          'x-access-token': localStorage.getItem('token'),
+                          }
+                      })
 
-                  if(updatedUserInfo.data.status==="ok")
-                  {
-                      dispatchUserWishlist({type: "UPDATE_USER_WISHLIST",payload: updatedUserInfo.data.user.wishlist})
-                      dispatchUserCart({type: "UPDATE_USER_CART",payload: updatedUserInfo.data.user.cart})
-                  }
-                } catch (error) {
-                  console.error("Error fetching user data:", error)
-                }
-            })()
+                      if(updatedUserInfo.data.status==="ok")
+                      {
+                          dispatchUserWishlist({type: "UPDATE_USER_WISHLIST",payload: updatedUserInfo.data.user.wishlist})
+                          dispatchUserCart({type: "UPDATE_USER_CART",payload: updatedUserInfo.data.user.cart})
+                      }
+                    } catch (error) {
+                      console.error("Error fetching user data:", error)
+                      // Don't remove token just because API call failed
+                    }
+                })()
+            }
+        } catch (jwtError) {
+            console.error("Invalid token:", jwtError)
+            localStorage.removeItem('token')
         }
     }   
   },[dispatchUserCart, dispatchUserWishlist])
@@ -118,15 +124,7 @@ function Home() {
       </Link>
 
       <h1 className='homepage-headings'>New Arrivals</h1>
-      <React.Suspense fallback={
-        <div className='new-arrivals-container'>
-          <div style={{textAlign: 'center', padding: '2rem'}}>
-            <h3>Loading new arrivals...</h3>
-          </div>
-        </div>
-      }>
-        <NewArrivals/>
-      </React.Suspense>
+      <NewArrivals/>
       <Footer/>
 
     </div>

@@ -1,12 +1,12 @@
 .product-page-sidebar
 {
-    height: 62rem;
+    height: 45rem;
     position: fixed;
     top: 10.7rem;
     overflow-y: scroll;
     width: fit-content;
     max-width: 100%;
-    padding: 3rem 3rem 3rem 3rem;
+    padding: 1.5rem;
     grid-column: 1/2;
     display: flex;
     flex-direction: column;

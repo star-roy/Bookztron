@@ -2,9 +2,9 @@
 {
     display: grid;
     width: 100%;
-    min-height: 50vh;
-    margin-top: 7rem;
-    padding: 6rem 10rem;
+    min-height: 40vh;
+    margin-top: 4rem;
+    padding: 3rem 6rem;
     justify-content: center;
     align-items: flex-start;
     grid-template-columns: repeat(3, 1fr);

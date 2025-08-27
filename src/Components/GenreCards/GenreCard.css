@@ -1,36 +1,28 @@
 .genre-card
 {
-    width: 16rem;
-    height: 16rem;
+    width: 15rem;
+    height: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: var(--sky-blue);
-    /* background-color: burlywood; */
     cursor: pointer;
     box-shadow: 0 0 1px rgb(48 48 48 / 54%);
     border-radius: 4px;
 }
 
-@media only screen and (max-width: 1200px) {
-    .genre-card {
-        width: 14rem;
-        height: 14rem;
-    }
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     .genre-card {
         width: 12rem;
         height: 12rem;
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
     .genre-card {
-        width: 11rem;
-        height: 11rem;
+        width: 14rem;
+        height: 14rem;
     }
 }
 
@@ -48,19 +40,19 @@
 
 .genre-card p
 {
-    font-size: 2.2rem;
+    font-size: 1.3rem;
     text-align: center;
     padding: 0 1rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     .genre-card p {
-        font-size: 1.8rem;
+        font-size: 1.1rem;
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
     .genre-card p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }

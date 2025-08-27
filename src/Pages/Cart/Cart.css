@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -28,10 +28,10 @@
 .cart-grid
 {
     display: grid;
-    width: 80%;
+    width: 85%;
     min-width: fit-content;
-    padding: 2rem;
-    gap: 2rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
     grid-template-columns: repeat( 4 , 1fr );
 }
 
@@ -58,7 +58,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 @media only screen and (max-width: 768px) {
