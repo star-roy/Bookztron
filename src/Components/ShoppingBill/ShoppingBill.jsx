@@ -56,7 +56,7 @@ function ShoppingBill()
             "currency": data.currency,
             "name": "Bookztron",
             "description": "Thank you for shopping!",
-            "image": "https://raw.githubusercontent.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/development/public/favicon-icon.png",
+            "image": "https://raw.githubusercontent.com/star-roy/Bookztron/main/public/favicon-icon.png",
             "order_id": data.id,
             "handler": async function (response){
                 showToast("success","","Payment Successful! 😎")
